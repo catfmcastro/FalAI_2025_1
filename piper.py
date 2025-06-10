@@ -88,10 +88,8 @@ def main():
             response = bot.send_message(user_input)
             print(response)
             os.system(f"touch output{i}.wav")
-            os.system(f"echo \"{response}\" | ./piper.exe -m ./pt_BR-faber-medium.onnx -f ./output{i}.wav")
-            echo f'{response}' | piper \
-  --model pt_BR-faber-medium.onnx \
-  --output_file f"output{i}"
+            #os.system(f"echo \"{response}\" | ./piper.exe -m ./pt_BR-faber-medium.onnx -f ./output{i}.wav")
+            os.system(f"echo '{response}' | piper \ --pt_BR-faber-medium.onnx \ --output_file output{i}.wav")
             playsound(f'./output{i}.wav')
             i += 1
             
