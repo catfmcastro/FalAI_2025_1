@@ -87,8 +87,9 @@ def main():
             print("Formatted: ", end="", flush=True)
             response = bot.send_message(user_input)
             print(response)
-            os.system(f"echo \"{response}\" | .\Codigo\Piper\piper.exe -m .\Codigo\Piper\Voices\pt_BR-faber-medium.onnx -f .\Codigo\output{i}.wav")
-            playsound(f'.\Codigo\output{i}.wav')
+            os.system(f"touch output{i}.wav")
+            os.system(f"echo \"{response}\" | ./piper.exe -m ./pt_BR-faber-medium.onnx -f ./output{i}.wav")
+            playsound(f'./output{i}.wav')
             i += 1
             
         except KeyboardInterrupt:
