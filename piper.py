@@ -15,7 +15,7 @@ def setup_client():
 
 
 class ChatBot:
-    def _init_(self, model="gpt-4.1-mini"):
+    def __init__(self, model="gpt-4.1-mini"):
         self.client = setup_client()
         self.model = model
         self.system_prompt = """Você receberá uma sequência de texto formada apenas por letras, sem espaços ou pontuação. Sua tarefa é:
