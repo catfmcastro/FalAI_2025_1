@@ -89,6 +89,7 @@ def main():
             print(response)
             os.system(f"touch output{i}.wav")
             os.system(f"echo \"{response}\" | ./piper.exe -m ./pt_BR-faber-medium.onnx -f ./output{i}.wav")
+            echo f'{response}' | piper \ --model pt_BR-faber-medium.onnx \ --output_file outputi.wav
             playsound(f'./output{i}.wav')
             i += 1
             
