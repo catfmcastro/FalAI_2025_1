@@ -72,7 +72,7 @@ def extract_vector(results):
 
 # ---- Main logic ----
 buffer = deque(maxlen=SEQ_LEN)
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 print("📹 Starting camera for 7 seconds...")
 
 best_prediction = None  # (label_index, confidence)
