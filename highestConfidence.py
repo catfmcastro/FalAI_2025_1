@@ -23,7 +23,7 @@ class GRUClassifier(torch.nn.Module):
         return self.fc(h)
 
 # ---------------- CONFIG ----------------
-CKPT_PATH = ".\checkpoint_gru_h256_l3_best.pt"
+CKPT_PATH = "checkpoint_gru_h256_l3_best.pt"
 SEQ_LEN   = 30
 DEVICE    = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 DURATION  = 7  # seconds to run camera
